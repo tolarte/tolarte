@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TEAM TOLARTE</title>
+  <style>
+    body {
+      background-color: #1e1e2f;
+      color: #f0f0f5;
+      font-family: 'Segoe UI', sans-serif;
+      padding: 2rem;
+    }
+    h2 {
+      text-align: center;
+      color: #00c8ff;
+      margin-bottom: 2rem;
+    }
+    table {
+      width: 100%;
+      max-width: 800px;
+      margin: auto;
+      border-collapse: collapse;
+      background-color: #27293d;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    }
+    th, td {
+      padding: 1rem;
+      text-align: center;
+      border-bottom: 1px solid #444;
+    }
+    th {
+      background-color: #00c8ff;
+      color: #1e1e2f;
+    }
+    button {
+      background-color: #00c8ff;
+      color: #1e1e2f;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+    button:hover {
+      background-color: #0099cc;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>DATA LIST</h2>
+
+  <table>
+    <thead>
+      <tr>
+        <th>name</th>
+        <th>Publication date</th>
+        <th>Download data file</th>
+        
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>hotmail</td>
+        <td>2025/06/27</td>
+        <td><button onclick="downloadFile('../res/file/hotmail1.zip')">Download data</button></td>
+        
+      </tr>
+      <tr>
+        <td>yahoo</td>
+        <td>2025/06/27</td>
+        <td><button onclick="downloadFile('../res/file/hotmail2.zip')">Download data</button></td>
+        
+      </tr>
+
+      <tr>
+        <td>mix</td>
+        <td>2025/06/27</td>
+        <td><button onclick="downloadFile('../res/file/mix1.zip')">Download data</button></td>
+        
+      </tr>
+    </tbody>
+
+    
+  </table>
+
+  <script>
+    function downloadFile(filePath) {
+      const link = document.createElement('a');
+      link.href = filePath;
+      link.download = filePath.split('/').pop();
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }
+  </script>
+
+</body>
+</html>

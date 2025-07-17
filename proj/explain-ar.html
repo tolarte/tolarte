@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TEAM TOLARTE</title>
+  <style>
+    body {
+      font-family: Tahoma, sans-serif;
+      background: #1b1b2f;
+      color: #f0f0f5;
+      max-width: 900px;
+      margin: auto;
+      padding: 2rem;
+      line-height: 1.8;
+      direction: rtl;
+      text-align: right;
+    }
+
+    h1 {
+      color: #00c8ff;
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+
+    .step {
+      background-color: #2e2e3f;
+      padding: 1.2rem;
+      margin-bottom: 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    }
+
+    .step h2 {
+      color: #ffffff;
+      font-size: 1.3rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .step code {
+      display: block;
+      background: #1a1a27;
+      padding: 1rem;
+      border-radius: 6px;
+      overflow-x: auto;
+      color: #00ffcc;
+      font-family: monospace;
+      margin-top: 1rem;
+    }
+
+    .note {
+      background-color: #ffc107;
+      color: #000;
+      padding: 1rem;
+      border-radius: 6px;
+      margin-top: 2rem;
+      text-align: center;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 3rem;
+      font-size: 0.9rem;
+      color: #aaa;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>📌 كيفية إعداد بوت اختراق برابط عبر Telegram</h1>
+
+  <div class="step">
+    <h2>الخطوة 1: الحصول على رمز البوت (Token)</h2>
+    <p>
+      افتح تطبيق Telegram وابحث عن <strong>@BotFather</strong>. أرسل الأمر <code>/newbot</code> واتبع التعليمات. بعد الإنتهاء، سيعطيك BotFather رمز البوت مثل:
+    </p>
+    <code>
+      1234567890:ABCDefGhIjkLmNoPQRstuVWXyz123456789
+    </code>
+  </div>
+
+  <div class="step">
+    <h2>الخطوة 2: الحصول على معرف المستخدم (User ID)</h2>
+    <p>
+      اذهب إلى <a href="https://t.me/userinfobot" target="_blank">@userinfobot</a> على Telegram، ثم ابدأ البوت وسيعرض لك معرف المستخدم الخاص بك (مثال: <code>556677889</code>).
+    </p>
+  </div>
+
+  <div class="step">
+    <h2>الخطوة 3: لصق المعلومات داخل السكريبت</h2>
+    <p>
+      افتح سكريبت HTML وابحث عن السطور التالية:
+    </p>
+    <code>
+      botToken = "TOKEN BOT"<br>
+      chatId = ID BOT
+    </code>
+    <p>
+      قم بتبديل <code>TOKEN BOT</code> برمز البوت الحقيقي، واستبدل <code>ID BOT</code> بمعرف Telegram الخاص بك.
+    </p>
+  </div>
+
+  <div class="step">
+    <h2>الخطوة 4: حفظ وتشغيل السكريبت</h2>
+    <p>
+      احفظ السكريبت، ويمكنك رفعه على استضافة الخاصة بنا    <code>https://lively-efficacious-gear.glitch.me/</code>، ثم سيعتيك رابط URL الخاص بك.
+    </p>
+  </div>
+
+  <div class="note">
+    ⚠️ تأكد من أنك بدأت البوت يدوياً مرة واحدة على الأقل، /start.
+  </div>
+
+  <footer>
+    &copy; 2025 فريق Tolarte 
+  </footer>
+
+</body>
+</html>
